@@ -1,5 +1,6 @@
 # Project1
 
+## Screenshots of the Deployed Website
 
 #### Resources
 CSS framework used : Bulma https://bulma.io/documentation/
