@@ -1,6 +1,6 @@
 # Project1
 
-# CSS framework : Bulma https://bulma.io/documentation/
+CSS framework used : Bulma https://bulma.io/documentation/
 
 How to start development:
 
