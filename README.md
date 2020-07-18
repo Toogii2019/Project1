@@ -12,9 +12,9 @@ git clone -b project1_development git@github.com:Toogii2019/Project1.git
 
 3. Push the change to a repo
 
+git push
 
-
-
+4. Go to https://github.com/Toogii2019/Project1/pulls and create New Pull Request for your changes.
 
 # Deployed link
 
