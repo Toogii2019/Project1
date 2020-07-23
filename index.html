@@ -1,22 +1,120 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triply</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="static/js/script.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <nav class="navbar is-primary">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <!-- <div class="navbar-start">
+          <a class="navbar-item">
+            Weather Info
+          </a>
+    
+          <a class="navbar-item">
+            Trip informations
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Bands in Town
+              </a>
+              <a class="navbar-item">
+                Movies in Town
+              </a>
+              <a class="navbar-item">
+                And More
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div> -->
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <div class="field has-addons" id="navbar-input">
+                  <div class="control" id="town-input">
+                    <input class="input" type="search" placeholder="Enter a place to travel">
+                  </div>
+                  <div class="from">
+                    From
+                  </div>
+                  <div class="control">
+                    <input class="input" type="date" placeholder="Date from">
+                  </div>
+                  <div class="to">
+                    to
+                  </div>
+                  <div class="control">
+                    <input class="input" type="date" placeholder="Date to be in town">
+                  </div>
+                  <div class="control" id="search-button">
+                    <a class="button is-info">
+                      Search
+                    </a>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>  
+    <header><h4>Welcome to Your Trip Assistant</h4></header>
+    <div class="body-container">
+
+      <div class="slide-container">
+        <div class="img-container">
+          <img class="slide-image slide-image-1" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thailand-grand-palace-1541104612.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*">
+        </div>    
+        <div class="img-container">
+          <img class="slide-image slide-image-2" src="https://i.insider.com/5c755fe82628987f7164576a?width=1200&format=jpeg">
+        </div>  
+        <div class="img-container">
+          <img class="slide-image slide-image-3" src="https://theyellowroad.in/wp-content/uploads/2018/04/mongoliablog-1200x600.jpg">
+        </div>       
+        <div class="img-container">
+          <img class="slide-image slide-image-4" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thailand-grand-palace-1541104612.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*">
+        </div>    
+        <div class="img-container">
+          <img class="slide-image slide-image-5" src="https://i.insider.com/5c755fe82628987f7164576a?width=1200&format=jpeg">
+        </div>  
+        <div class="img-container">
+          <img class="slide-image slide-image-6" src="https://theyellowroad.in/wp-content/uploads/2018/04/mongoliablog-1200x600.jpg">
+        </div>      
+      </div>
     </div>
-  </section>
-  </body>
+  </div>
+</body>
 </html>
