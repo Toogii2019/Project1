@@ -35,7 +35,7 @@ h4 {
 }
 
 .to {
-    margin: 0 10px 0 10px;
+    margin: 5px 10px 0 10px;
 }
 
 #town-input {
@@ -43,7 +43,7 @@ h4 {
 }
 
 .from {
-    margin: 0 20px 0 5px;
+    margin: 5px 20px 0 5px;
 }
 
 .body-container{
@@ -89,4 +89,15 @@ h4 {
     width: 1200px;
     position: relative;
     float: left;
+}
+
+#navbar-input {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1024px) {
+    #navbar-input {
+        flex-direction: column;
+    }
 }
