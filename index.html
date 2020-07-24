@@ -13,13 +13,13 @@
 </head>
 <body>
   <div class="main-container">
-    <nav class="navbar is-primary">
+    <nav class="navbar is-primary" >
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
         </a>
     
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active'); document.getElementById('body-container').classList.toggle('hidden');">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -61,42 +61,45 @@
     
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
+            <!-- <div class="buttons"> -->
               <!-- <a class="button is-primary"> -->
                 <div class="field has-addons" id="navbar-input">
                   <div class="control source-town-input" id="town-input">
-                    <input class="input" id="source-town-input" type="search" placeholder="Starting point">
+                    <input class="input" id="source-town-input" type="search" placeholder="Traveling from">
                   </div>
+                  <div class="destination-info" style="margin-right: 20px">
                   <div class="control destination-town-input" id="town-input">
-                    <input class="input" type="search" placeholder="Destination point">
+                    <input class="input" type="search" placeholder="To/Staying">
                   </div>
                   <div class="from">
                     From
                   </div>
                   <div class="control">
-                    <input class="input" type="date" placeholder="Date from">
+                    <input class="input" type="date" placeholder="Date to arrive in Town">
                   </div>
                   <div class="to">
                     to
                   </div>
                   <div class="control">
-                    <input class="input" type="date" placeholder="Date to be in town">
+                    <input class="input" type="date" placeholder="Date to leave town">
                   </div>
+                
                   <div class="control" id="search-button">
                     <a class="button is-info">
                       Search
                     </a>
                   </div>
                 </div>
+                </div>
               <!-- </a> -->
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
     </nav>  
     <header><h4>Welcome to Your Trip Assistant</h4></header>
     <p class="header-instruction">We will help you plan your trip by providing a <strong>Weather</strong>, <strong>Accommodation</strong> and <strong>Activity</strong> information in the place you are going to Visit</p>
-    <div class="body-container">
+    <div class="body-container" id="body-container">
 
       <div class="slide-container">
         <div class="img-container">
