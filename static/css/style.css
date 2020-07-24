@@ -22,7 +22,14 @@ body {
 h4 {
     margin-top: 20px;
     text-align: center;
-    font-size: 50px;
+    font-size: 55px;
+    font-family: Caveat, sans-serif;
+}
+
+.cityName {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 55px;
     font-family: Caveat, sans-serif;
 }
 
@@ -52,6 +59,11 @@ h4 {
     font-size: 20px;
 }
 
+.header-search {
+    text-align: left;
+    font-family: Caveat, sans-serif;
+    font-size: 30px;
+}
 .body-container{
     overflow: hidden;
     height: 70vh;
