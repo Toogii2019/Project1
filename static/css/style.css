@@ -35,7 +35,7 @@ h4 {
 }
 
 .to {
-    margin: 5px 10px 0 10px;
+    margin: 10px 10px 0 10px;
 }
 
 #town-input {
@@ -43,7 +43,13 @@ h4 {
 }
 
 .from {
-    margin: 5px 20px 0 5px;
+    margin: 10px 20px 0 5px;
+}
+
+.header-instruction {
+    text-align: center;
+    font-family: Caveat, sans-serif;
+    font-size: 20px;
 }
 
 .body-container{
