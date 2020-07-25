@@ -21,7 +21,7 @@
             <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
           </a>
       
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active'); document.getElementById('body-container').classList.toggle('hidden');">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -117,13 +117,11 @@
     <!-- <p class="header-search"><strong>Weather</strong>, <strong>Trip Distance</strong> and <strong>Local Activity</strong></p> -->
     <div class="trip-container" style="margin-left: auto; margin-right: auto;">
         <div class="trip-details">
-         <p class="header-search" style="text-align: center;"><strong>From: <span id="source"></span></strong></p>
+         <p class="header-search" id="source-info" style="text-align: center;"><strong>From: <span id="source"></span></strong></p>
          <p class="header-search" style="text-align: center;"><strong>Destination: <span id="destination"></span></strong></p>
         </div>
         <p class="header-search" style="text-align: center;"><strong>Trip Distance: <span id="distance">0</span></strong></p>
         <p class="header-search" style="text-align: center;"><strong>Transport: <span id="travel-mode">DRIVING</span></strong></p>
-
-
         <div id="map" style="margin-left: auto; margin-right: auto;">test map</div>
     </div>  
   </div>
