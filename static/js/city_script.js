@@ -1,5 +1,6 @@
 var lt = -100;
 var ln = -300;
+let navigated = false;
 
 function initMap() {
     let map = new google.maps.Map(document.getElementById("map"), {
@@ -19,7 +20,7 @@ function initMap() {
 }
 
 function calcRoute(directionsService, directionsDisplay) {
-
+    console.log("Google MAP API used!");
     let source = localStorage.getItem("source-town");
     let destination = localStorage.getItem("destination-town");
     directionsService.route({
@@ -42,4 +43,16 @@ function calcRoute(directionsService, directionsDisplay) {
 
     }   
     )
+}
+
+function startNavigation() {
+    if (!navigated) {
+        var scriptCont = $("<script async defer>");
+
+        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjdq56aGm-Skvn5XkX903fYDpqhda4qOo&callback=initMap");
+        console.log(scriptCont);
+        $("body").append(scriptCont);
+        navigated = true;
+    }
+
 }
