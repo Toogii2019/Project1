@@ -11,6 +11,9 @@ $("document").ready(function() {
   
     function parsePosition(position) {
       console.log(position.coords.latitude, position.coords.longitude);
+      lt = position.coords.latitude;
+      ln = position.coords.longitude;
+      initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
     //   $(".source-town-input").text()
 
