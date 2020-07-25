@@ -12,10 +12,14 @@
 
 body {
     background-color: var(--primary);
-    height: 100vh;
+    height: auto;
     width: 100vw;
     padding: 0;
     margin: 0;
+    min-width: 313px;
+    min-height: 100vh;
+    overflow: hidden;
+
 
 }
 
@@ -25,14 +29,6 @@ h4 {
     font-size: 55px;
     font-family: Caveat, sans-serif;
 }
-
-.cityName {
-    margin-top: 20px;
-    text-align: left;
-    font-size: 55px;
-    font-family: Caveat, sans-serif;
-}
-
 #search {
     padding: 5px;
 }
@@ -64,7 +60,7 @@ h4 {
     font-family: Caveat, sans-serif;
     font-size: 30px;
 }
-.body-container{
+.body-container {
     overflow: hidden;
     height: 60vh;
     width: 60vw;
@@ -72,7 +68,14 @@ h4 {
     margin-right: auto;
     margin-top: 40px;
     border: 1px solid;
+}
 
+/* .main-container {
+    background: var(--primary)
+} */
+
+.hidden {
+    display: none;
 }
 
 @-webkit-keyframes slide_automation {
@@ -113,9 +116,38 @@ h4 {
     display: flex;
     flex-direction: row;
 }
+.destination-info {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px dashed; */
+    padding: 3px;
+    justify-content: center;
+    width: auto;
+    color: black;
+    background: var(--light-dark);
+}
+
+#source-town-input {
+    margin-top: 3px;
+}
+
 
 @media screen and (max-width: 1024px) {
     #navbar-input {
         flex-direction: column;
     }
+    #source-town-input {
+        margin-bottom: 15px;
+        
+    }
+    .destination-info {
+        flex-direction: column;
+    }
 }
+
+@media screen and (max-width: 1165px) {
+    .input {
+        width: 150px;
+    }
+}
+
