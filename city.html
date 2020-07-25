@@ -10,95 +10,106 @@
   <link rel="stylesheet" href="static/css/city_Style.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="static/js/script.js"></script>
+  <!-- <script src="static/js/script.js"></script> -->
   <script src="static/js/city_script.js"></script>
 </head>
 <body>
   <div class="main-container">
-    <nav class="navbar is-primary">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
-        </a>
-    
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-    
-      <div id="navbarBasicExample" class="navbar-menu">
-        <!-- <div class="navbar-start">
-          <a class="navbar-item">
-            Weather Info
+    <nav class="navbar is-primary" >
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
           </a>
-    
-          <a class="navbar-item">
-            Trip informations
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active'); document.getElementById('body-container').classList.toggle('hidden');">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
-    
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <!-- <div class="navbar-start">
+            <a class="navbar-item">
+              Weather Info
             </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Bands in Town
+      
+            <a class="navbar-item">
+              Trip informations
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
               </a>
-              <a class="navbar-item">
-                Movies in Town
-              </a>
-              <a class="navbar-item">
-                And More
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Bands in Town
+                </a>
+                <a class="navbar-item">
+                  Movies in Town
+                </a>
+                <a class="navbar-item">
+                  And More
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
             </div>
-          </div>
-        </div> -->
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <!-- <a class="button is-primary"> -->
-                <div class="field has-addons" id="navbar-input">
-                  <div class="control" id="town-input">
-                    <input class="input" type="search" placeholder="Enter a place to travel">
+          </div> -->
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <!-- <div class="buttons"> -->
+                <!-- <a class="button is-primary"> -->
+                  <div class="field has-addons" id="navbar-input">
+                    <div class="control source-town-input" id="town-input">
+                      <input class="input" id="source-town-input" type="search" placeholder="Traveling from">
+                    </div>
+                    <div class="destination-info" style="margin-right: 20px">
+                    <div class="control destination-town-input" id="town-input">
+                      <input class="input" id="destination-town-input" type="search" placeholder="To/Staying">
+                    </div>
+                    <div class="from">
+                      From
+                    </div>
+                    <div class="control">
+                      <input class="input" type="date" placeholder="Date to arrive in Town">
+                    </div>
+                    <div class="to">
+                      to
+                    </div>
+                    <div class="control">
+                      <input class="input" type="date" placeholder="Date to leave town">
+                    </div>
+                  
+                    <div class="control" id="search-button">
+                      <a class="button is-info">
+                        Search
+                      </a>
+                    </div>
                   </div>
-                  <div class="from">
-                    From
                   </div>
-                  <div class="control">
-                    <input class="input" type="date" placeholder="Date from">
-                  </div>
-                  <div class="to">
-                    to
-                  </div>
-                  <div class="control">
-                    <input class="input" type="date" placeholder="Date to be in town">
-                  </div>
-                  <div class="control" id="search-button">
-                    <a class="button is-info">
-                      Search
-                    </a>
-                  </div>
-                </div>
-              <!-- </a> -->
+                <!-- </a> -->
+              <!-- </div> -->
             </div>
           </div>
         </div>
-      </div>
-    </nav>  
+      </nav>   
     <header class = "cityName"><h4>Placeholder</h4></header>
 
     
     <!-- <p class="header-search"><strong>Weather</strong>, <strong>Trip Distance</strong> and <strong>Local Activity</strong></p> -->
     <div class="trip-container" style="margin-left: auto; margin-right: auto;">
-        <p class="header-search" style="text-align: center;"><strong>Trip Distance</strong></p>
+        <p class="header-search" style="text-align: center;"><strong>From: <span id="source"></span></strong></p>
+        <p class="header-search" style="text-align: center;"><strong>Destination: <span id="destination"></span></strong></p>
+
+        <p class="header-search" style="text-align: center;"><strong>Trip Distance: <span id="distance">0</span></strong></p>
+        <p class="header-search" style="text-align: center;"><strong>Transport: <span id="travel-mode">DRIVING</span></strong></p>
+
 
         <div id="map" style="margin-left: auto; margin-right: auto;">test map</div>
     </div>  
