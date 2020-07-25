@@ -4,3 +4,11 @@
     font-size: 55px;
     font-family: Caveat, sans-serif;
 }
+
+
+#map {
+    height: 50vh;
+    width: 50vw;
+    border: 1px double;
+    /* align-self: center; */
+}

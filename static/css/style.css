@@ -10,6 +10,11 @@
     --question-color:  rgb(248, 217, 190);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--primary);
     height: auto;
