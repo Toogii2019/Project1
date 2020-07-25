@@ -12,3 +12,13 @@
     border: 1px double;
     /* align-self: center; */
 }
+
+.trip-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#source-info {
+    margin-right: 10px;
+}
