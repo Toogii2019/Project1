@@ -14,13 +14,11 @@ function initMap() {
 
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
-    console.log(directionsService);
     directionsDisplay.setMap(map);
     calcRoute(directionsService, directionsDisplay);
 }
 
 function calcRoute(directionsService, directionsDisplay) {
-    console.log("Google MAP API used!");
     let source = localStorage.getItem("source-town");
     let destination = localStorage.getItem("destination-town");
     directionsService.route({
@@ -34,7 +32,6 @@ function calcRoute(directionsService, directionsDisplay) {
         else {
             window.alert('Direction request has failed!! - ' + status);
         }
-        console.log(response);
         $("#source").text(response.request.origin.query);
         $("#destination").text(response.request.destination.query);
 
@@ -45,14 +42,15 @@ function calcRoute(directionsService, directionsDisplay) {
     )
 }
 
+// Please remove content below this for the demo
 function startNavigation() {
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
         scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjdq56aGm-Skvn5XkX903fYDpqhda4qOo&callback=initMap");
-        console.log(scriptCont);
         $("body").append(scriptCont);
         navigated = true;
     }
 
 }
+// Please remove content above this point for the demo
