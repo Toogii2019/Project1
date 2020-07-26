@@ -2,7 +2,7 @@ var source;
 var destination;
 
 $("document").ready(function() {
-    var APIKey = "OPENWEATHER_API_KEY";
+    var APIKey = "OPENWEATHER_API_KEY_HIDDEN";
 
     function getLocation() {
   
