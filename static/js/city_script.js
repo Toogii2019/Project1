@@ -47,10 +47,11 @@ function calcRoute(directionsService, directionsDisplay) {
 
 // Please remove content below this for the demo
 function startNavigation() {
+    var GC_API_KEY = "GOOGLE_API_KEY";
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
-        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=CV7t1e0IHOuj5DS8ksRGse5HMXIkJ05UK3wMFo6&callback=initMap");
+        scriptCont.attr("src", `https://maps.googleapis.com/maps/api/js?key=${GC_API_KEY}&callback=initMap`);
         $("body").append(scriptCont);
         navigated = true;
     }
