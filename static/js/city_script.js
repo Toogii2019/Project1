@@ -26,16 +26,19 @@ function calcRoute(directionsService, directionsDisplay) {
         destination: localStorage.getItem("destination-town"),
         travelMode: 'DRIVING'
     },function(response, status) {
+        console.log(response);
         if (status === "OK") {
             directionsDisplay.setDirections(response);
         }
         else {
             window.alert('Direction request has failed!! - ' + status);
         }
-        $("#source").text(response.request.origin.query);
-        $("#destination").text(response.request.destination.query);
+        $("#source").text(response.routes[0].legs[0].start_address);
+        $("#destination").text(response.routes[0].legs[0].end_address);
 
         $("#distance").text(response.routes[0].legs[0].distance.text);
+        $("#duration").text(response.routes[0].legs[0].duration.text);
+
         $("#travel-mode").text(response.request.travelMode);
 
     }   
@@ -47,7 +50,7 @@ function startNavigation() {
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
-        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjdq56aGm-Skvn5XkX903fYDpqhda4qOo&callback=initMap");
+        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=${{ secrets.APIKEY }}&callback=initMap");
         $("body").append(scriptCont);
         navigated = true;
     }
