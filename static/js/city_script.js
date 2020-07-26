@@ -50,7 +50,7 @@ function startNavigation() {
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
-        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=${{ secrets.APIKEY }}&callback=initMap");
+        scriptCont.attr("src", "https://maps.googleapis.com/maps/api/js?key=CV7t1e0IHOuj5DS8ksRGse5HMXIkJ05UK3wMFo6&callback=initMap");
         $("body").append(scriptCont);
         navigated = true;
     }
