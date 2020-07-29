@@ -4,6 +4,7 @@ var dateFrom;
 var dateTo;
 
 $("document").ready(function() {
+
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
     function getLocation() {
@@ -24,11 +25,12 @@ $("document").ready(function() {
 
     //   initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
-    //   $(".source-town-input").text()
+      //   $(".source-town-input").text()
 
     }
-    getLocation()
 
+    getLocation()
+    
     function getTownName(lat, lon) {
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
     
@@ -48,24 +50,27 @@ $("document").ready(function() {
     
       }
     $("#search-button").on("click", function(event) {
-        event.preventDefault();
-        source = $("#source-town-input").val();
-        destination = $("#destination-town-input").val();
-        dateFrom = $("#date-from").val();
-        dateTo = $("#date-to").val();
-        console.log(dateFrom); 
-        console.log(dateTo);
-        if (!source || !destination || !dateFrom || !dateTo) {
-            alert("Please complete the form before searching")
-        }
-        else {
+      // console.log(document);
+      event.preventDefault();
+      source = $("#source-town-input").val();
+      destination = $("#destination-town-input").val();
+      dateFrom = $("#date-from").val();
+      dateTo = $("#date-to").val();
+      // console.log(dateFrom); 
+      // console.log(dateTo);
+      // console.log(source); 
+      // console.log(destination);
+      if (!source || !destination || !dateFrom || !dateTo) {
+          alert("Please complete the form before searching")
+      }
+      else {
 
-            localStorage.setItem("source-town", $("#source-town-input").val());
-            localStorage.setItem("destination-town", $("#destination-town-input").val());
-            localStorage.setItem("date-from", $("#date-from").val());
-            localStorage.setItem("date-to", $("#date-to").val());
-            window.location.href = "city.html";
-        }
+          localStorage.setItem("source-town", $("#source-town-input").val());
+          localStorage.setItem("destination-town", $("#destination-town-input").val());
+          localStorage.setItem("date-from", $("#date-from").val());
+          localStorage.setItem("date-to", $("#date-to").val());
+          window.location.href = "city.html";
+      }
 
     })
 })

@@ -1,5 +1,7 @@
 var APIKey = "4329b9a304464e3aaf6df7df53ecd8b3";
 let cityName = localStorage.getItem("destination-town"); 
+console.log(document);
+
 getWeather();
 function getWeather() {
 
@@ -45,7 +47,9 @@ function getWeather() {
                 forecast[i].append(forecastHumidity);
                 
             }
-
+            $("#town-name").html("<h4>" + cityName + "</h4>");
+            $("#town-name").css("font-family", "Caveat");
+            $("#town-name").css("text-align", "center");
         });  
         
 };

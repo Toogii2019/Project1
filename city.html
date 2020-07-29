@@ -12,6 +12,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="static/js/city_script.js"></script>
   <script src="static/js/city_weather.js"></script>
+  <script src="static/js/script.js"></script>
 </head>
 <body>
   <div class="main-container">
@@ -45,13 +46,13 @@
                       From
                     </div>
                     <div class="control">
-                      <input class="input" type="date" placeholder="Date to arrive in Town">
+                      <input class="input" id="date-from" type="date" placeholder="Date to arrive in Town">
                     </div>
                     <div class="to">
                       to
                     </div>
                     <div class="control">
-                      <input class="input" type="date" placeholder="Date to leave town">
+                      <input class="input" id="date-to" type="date" placeholder="Date to leave town">
                     </div>
                   
                     <div class="control" id="search-button">
@@ -65,12 +66,12 @@
           </div>
         </div>
       </nav>   
-    <header class = "cityName"><h4>Placeholder</h4></header>
+    <header class = "cityName"><h4>Trip Information</h4></header>
     
     <div class="trip-container-weather" style="margin-left: auto; margin-right: auto;">
 
       <div style="text-align: center;"><h3><strong>5-Day Forecast</h3></strong></div>
-
+      <div style="text-align: center;" id="town-name"></div>
       <div class="weather">
           <div class="col forecast bg-primary text-white"></div>
           <div class="col forecast bg-primary text-white"></div>

@@ -35,7 +35,7 @@ function calcRoute(directionsService, directionsDisplay) {
         }
         $("#source").text(response.routes[0].legs[0].start_address);
         $("#destination").text(response.routes[0].legs[0].end_address);
-
+        localStorage.setItem(response.routes[0].legs[0].end_address);
         $("#distance").text(response.routes[0].legs[0].distance.text);
         $("#duration").text(response.routes[0].legs[0].duration.text);
 
