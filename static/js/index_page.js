@@ -8,8 +8,9 @@ $("document").ready(function() {
     var later = new Date(JSON.parse(localStorage.getItem("location-gathered-at")));
 
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
-
+    
     function getLocation() {
+      // Get user's current location using Geolocation
       later = new Date();
       localStorage.setItem("location-gathered-at", JSON.stringify(later));
       if (navigator.geolocation) {
@@ -20,15 +21,11 @@ $("document").ready(function() {
     }
   
     function parsePosition(position) {
-      // console.log(position.coords.latitude, position.coords.longitude);
       lt = position.coords.latitude;
       ln = position.coords.longitude;
       localStorage.setItem("mylat", lt);
       localStorage.setItem("mylon", ln);
-
-    //   initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
-      //   $(".source-town-input").text()
 
     }
 
@@ -44,6 +41,9 @@ $("document").ready(function() {
     }
     
     function getTownName(lat, lon) {
+
+      // Convert user's lat lon into town name using openweather API;
+
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
     
         $.ajax({
@@ -51,8 +51,6 @@ $("document").ready(function() {
           method: "GET"
           })
           .then(function(response) {
-    
-            // console.log(response);
             $("#source-town-input").val(response.city.name + ", " + response.city.country);
             
             source = $("#source-town-input").val();
@@ -63,26 +61,23 @@ $("document").ready(function() {
     
       }
     $("#search-button").on("click", function(event) {
-      // console.log(document);
+
+      // When search-button clicked, save input values and call result.html
+
       event.preventDefault();
       source = $("#source-town-input").val();
       destination = $("#destination-town-input").val();
       dateFrom = $("#date-from").val();
       dateTo = $("#date-to").val();
-      // console.log(dateFrom); 
-      // console.log(dateTo);
-      // console.log(source); 
-      // console.log(destination);
       if (!source || !destination || !dateFrom || !dateTo) {
           alert("Please complete the form before searching")
       }
       else {
-          
           localStorage.setItem("source-town", $("#source-town-input").val());
           localStorage.setItem("destination-town", $("#destination-town-input").val());
           localStorage.setItem("date-from", $("#date-from").val());
           localStorage.setItem("date-to", $("#date-to").val());
-          window.location.href = "city.html";
+          window.location.href = "result.html";
       }
 
     })

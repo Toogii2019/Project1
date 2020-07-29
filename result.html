@@ -6,13 +6,13 @@
   <title>Triply</title>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="stylesheet" href="static/css/city_Style.css">
+  <link rel="stylesheet" href="static/css/index_page.css">
+  <link rel="stylesheet" href="static/css/result.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="static/js/city_script.js"></script>
-  <script src="static/js/city_weather.js"></script>
-  <script src="static/js/script.js"></script>
+  <script src="static/js/map.js"></script>
+  <script src="static/js/weather.js"></script>
+  <script src="static/js/index_page.js"></script>
 </head>
 <body>
   <div class="main-container">
@@ -80,20 +80,17 @@
           <div class="col forecast bg-primary text-white"></div>
       </div>
     </div>
-    
-    <!-- <p class="header-search"><strong>Weather</strong>, <strong>Trip Distance</strong> and <strong>Local Activity</strong></p> -->
     <div style="text-align: center; background: rgb(164, 164, 206);"><strong><h3>Transportion</h3></strong></div>
-
     <div class="trip-container" style="margin-left: auto; margin-right: auto;">
         <div class="trip-details">
-         <p class="header-search" id="source-info" style="text-align: center; font-size: 1rem">From: <span id="source"></span></p>
-         <p class="header-search" style="text-align: center; font-size: 1rem" >Destination: <span id="destination"></span></p>
+         <p class="header-search" id="source-info" style="text-align: center; font-size: 1rem"><strong>From: </strong><span id="source">....</span></p>
+         <p class="header-search" style="text-align: center; font-size: 1rem" ><strong>Destination: </strong><span id="destination">....</span></p>
         </div>
         <div class="trip-details"></div>
-         <p class="header-search" style="text-align: center; font-size: 1rem">Trip Distance: <span id="distance">0</span></p> 
-         <p class="header-search" style="text-align: center; font-size: 1rem">Trip Duration: <span id="duration">0</span></p> 
+         <p class="header-search" style="text-align: center; font-size: 1rem"><strong>Trip Distance: </strong><span id="distance">....</span></p> 
+         <p class="header-search" style="text-align: center; font-size: 1rem"><strong>Trip Duration: </strong><span id="duration">....</span></p> 
         </div>
-         <p class="header-search" style="text-align: center; font-size: 1rem">Transport: <span id="travel-mode">DRIVING</span></p>
+         <p class="header-search" style="text-align: center; font-size: 1rem"><strong>Transport: </strong><span id="travel-mode">....</span></p>
         <div id="map" style="margin-left: auto; margin-right: auto;">test map</div>
     </div>  
   </div>

@@ -3,6 +3,9 @@ var ln = -300;
 let navigated = false;
 
 function initMap() {
+
+    // Process google map API response
+
     let map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: lt, lng: ln },
     zoom: 8
@@ -19,6 +22,9 @@ function initMap() {
 }
 
 function calcRoute(directionsService, directionsDisplay) {
+
+    // Process google map Direction API result
+
     let source = localStorage.getItem("source-town");
     let destination = localStorage.getItem("destination-town");
     directionsService.route({
@@ -26,19 +32,20 @@ function calcRoute(directionsService, directionsDisplay) {
         destination: localStorage.getItem("destination-town"),
         travelMode: 'DRIVING'
     },function(response, status) {
-        // console.log(response);
         if (status === "OK") {
             directionsDisplay.setDirections(response);
         }
         else {
             window.alert('Direction request has failed!! - ' + status);
         }
+
+        // Rendering the result.html page
+
         $("#source").text(response.routes[0].legs[0].start_address);
         $("#destination").text(response.routes[0].legs[0].end_address);
         localStorage.setItem("destination-town", response.routes[0].legs[0].end_address);
         $("#distance").text(response.routes[0].legs[0].distance.text);
         $("#duration").text(response.routes[0].legs[0].duration.text);
-
         $("#travel-mode").text(response.request.travelMode);
 
     }   
