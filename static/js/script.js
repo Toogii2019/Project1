@@ -4,6 +4,9 @@ var dateFrom;
 var dateTo;
 
 $("document").ready(function() {
+    var now = new Date();
+    var later = new Date(JSON.parse(localStorage.getItem("location-gathered-at")));
+
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
     function getLocation() {
@@ -21,14 +24,21 @@ $("document").ready(function() {
       ln = position.coords.longitude;
       localStorage.setItem("mylat", lt);
       localStorage.setItem("mylon", ln);
-
+      later = new Date();
+      localStorage.setItem("location-gathered-at", JSON.stringify(later));
     //   initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
-    //   $(".source-town-input").text()
+      //   $(".source-town-input").text()
 
     }
-    getLocation()
 
+    var diff = Math.abs(later - now);
+    var timeDiff = Math.ceil(diff/(1000*60));
+    console.log(timeDiff);
+    if (timeDiff > 30) {
+      getLocation();
+    }
+    
     function getTownName(lat, lon) {
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
     
@@ -48,24 +58,27 @@ $("document").ready(function() {
     
       }
     $("#search-button").on("click", function(event) {
-        event.preventDefault();
-        source = $("#source-town-input").val();
-        destination = $("#destination-town-input").val();
-        dateFrom = $("#date-from").val();
-        dateTo = $("#date-to").val();
-        console.log(dateFrom); 
-        console.log(dateTo);
-        if (!source || !destination || !dateFrom || !dateTo) {
-            alert("Please complete the form before searching")
-        }
-        else {
+      // console.log(document);
+      event.preventDefault();
+      source = $("#source-town-input").val();
+      destination = $("#destination-town-input").val();
+      dateFrom = $("#date-from").val();
+      dateTo = $("#date-to").val();
+      // console.log(dateFrom); 
+      // console.log(dateTo);
+      // console.log(source); 
+      // console.log(destination);
+      if (!source || !destination || !dateFrom || !dateTo) {
+          alert("Please complete the form before searching")
+      }
+      else {
 
-            localStorage.setItem("source-town", $("#source-town-input").val());
-            localStorage.setItem("destination-town", $("#destination-town-input").val());
-            localStorage.setItem("date-from", $("#date-from").val());
-            localStorage.setItem("date-to", $("#date-to").val());
-            window.location.href = "city.html";
-        }
+          localStorage.setItem("source-town", $("#source-town-input").val());
+          localStorage.setItem("destination-town", $("#destination-town-input").val());
+          localStorage.setItem("date-from", $("#date-from").val());
+          localStorage.setItem("date-to", $("#date-to").val());
+          window.location.href = "city.html";
+      }
 
     })
 })
