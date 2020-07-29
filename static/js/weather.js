@@ -16,13 +16,8 @@ function getWeather() {
         //store data
         .then(function(response){
 
-            // console.log(forecastQueryURL);
-            // console.log(response);
-
             // Get Date
             const currentDate = new Date(response.dt*1000);
-            // console.log(currentDate);
-
             const forecast = document.querySelectorAll(".forecast");
             for (i=0; i<forecast.length; i++) {
                 forecast[i].innerHTML = "";
