@@ -10,7 +10,8 @@ $("document").ready(function() {
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
     function getLocation() {
-  
+      later = new Date();
+      localStorage.setItem("location-gathered-at", JSON.stringify(later));
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(parsePosition);
       } else {
@@ -24,8 +25,7 @@ $("document").ready(function() {
       ln = position.coords.longitude;
       localStorage.setItem("mylat", lt);
       localStorage.setItem("mylon", ln);
-      later = new Date();
-      localStorage.setItem("location-gathered-at", JSON.stringify(later));
+
     //   initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
       //   $(".source-town-input").text()
