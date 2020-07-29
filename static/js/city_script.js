@@ -26,7 +26,7 @@ function calcRoute(directionsService, directionsDisplay) {
         destination: localStorage.getItem("destination-town"),
         travelMode: 'DRIVING'
     },function(response, status) {
-        console.log(response);
+        // console.log(response);
         if (status === "OK") {
             directionsDisplay.setDirections(response);
         }
@@ -47,7 +47,7 @@ function calcRoute(directionsService, directionsDisplay) {
 
 // Please remove content below this for the demo
 function startNavigation() {
-    var GC_API_KEY = "GOOGLE_API_KEY_HIDDEN";
+    var GC_API_KEY = "AIzaSyBmHZvGIRn2j7G_KaMQp4sWCM5jBVB6ZKs";
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
