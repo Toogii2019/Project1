@@ -1,8 +1,10 @@
 var source;
 var destination;
+var dateFrom;
+var dateTo;
 
 $("document").ready(function() {
-    var APIKey = "OPENWEATHER_API_KEY_HIDDEN";
+    var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
     function getLocation() {
   
@@ -14,7 +16,7 @@ $("document").ready(function() {
     }
   
     function parsePosition(position) {
-      console.log(position.coords.latitude, position.coords.longitude);
+      // console.log(position.coords.latitude, position.coords.longitude);
       lt = position.coords.latitude;
       ln = position.coords.longitude;
       localStorage.setItem("mylat", lt);
@@ -36,8 +38,7 @@ $("document").ready(function() {
           })
           .then(function(response) {
     
-            console.log(response);
-            console.log
+            // console.log(response);
             $("#source-town-input").val(response.city.name + ", " + response.city.country);
             source = $("#source-town-input").val();
             destination = $("#destination-town-input").val();
@@ -50,15 +51,19 @@ $("document").ready(function() {
         event.preventDefault();
         source = $("#source-town-input").val();
         destination = $("#destination-town-input").val();
-        
-        if (!source || !destination) {
+        dateFrom = $("#date-from").val();
+        dateTo = $("#date-to").val();
+        console.log(dateFrom); 
+        console.log(dateTo);
+        if (!source || !destination || !dateFrom || !dateTo) {
             alert("Please complete the form before searching")
         }
         else {
 
             localStorage.setItem("source-town", $("#source-town-input").val());
             localStorage.setItem("destination-town", $("#destination-town-input").val());
-
+            localStorage.setItem("date-from", $("#date-from").val());
+            localStorage.setItem("date-to", $("#date-to").val());
             window.location.href = "city.html";
         }
 

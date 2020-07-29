@@ -1,4 +1,4 @@
-var APIKey = "OPENWEATHER_API_KEY_HIDDEN";
+var APIKey = "4329b9a304464e3aaf6df7df53ecd8b3";
 let cityName = localStorage.getItem("destination-town"); 
 getWeather();
 function getWeather() {
@@ -14,12 +14,12 @@ function getWeather() {
         //store data
         .then(function(response){
 
-            console.log(forecastQueryURL);
-            console.log(response);
+            // console.log(forecastQueryURL);
+            // console.log(response);
 
             // Get Date
             const currentDate = new Date(response.dt*1000);
-            console.log(currentDate);
+            // console.log(currentDate);
 
             const forecast = document.querySelectorAll(".forecast");
             for (i=0; i<forecast.length; i++) {
