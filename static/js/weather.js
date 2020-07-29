@@ -45,5 +45,8 @@ function getWeather() {
             $("#town-name").css("font-family", "Caveat");
             $("#town-name").css("text-align", "center");
         });  
+    
         
+
 };
+
