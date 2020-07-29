@@ -35,8 +35,12 @@ $("document").ready(function() {
     var diff = Math.abs(later - now);
     var timeDiff = Math.ceil(diff/(1000*60));
     console.log(timeDiff);
-    if (timeDiff > 30) {
+    if (timeDiff > 10) {
       getLocation();
+    }
+    else {
+      $("#source-town-input").val(localStorage.getItem("source-town"));
+      
     }
     
     function getTownName(lat, lon) {
@@ -50,6 +54,7 @@ $("document").ready(function() {
     
             // console.log(response);
             $("#source-town-input").val(response.city.name + ", " + response.city.country);
+            
             source = $("#source-town-input").val();
             destination = $("#destination-town-input").val();
     
@@ -72,7 +77,7 @@ $("document").ready(function() {
           alert("Please complete the form before searching")
       }
       else {
-
+          
           localStorage.setItem("source-town", $("#source-town-input").val());
           localStorage.setItem("destination-town", $("#destination-town-input").val());
           localStorage.setItem("date-from", $("#date-from").val());
