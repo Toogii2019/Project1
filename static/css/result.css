@@ -34,5 +34,5 @@ h3 {
 .weather [class*=col] {
     text-align: center;
     display: inline-block;
-    width : 10%;
+    width : auto;    
   }

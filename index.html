@@ -6,11 +6,10 @@
   <title>Triply</title>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/index_page.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script src="static/js/script.js"></script>
-  <script src="static/js/city_script.js"></script>
+  <script src="static/js/index_page.js"></script>
 </head>
 <body>
   <div class="main-container">
@@ -19,7 +18,6 @@
         <a class="navbar-item" href="index.html">
           <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
         </a>
-    
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active'); document.getElementById('body-container').classList.toggle('hidden');">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -28,72 +26,36 @@
       </div>
     
       <div id="navbarBasicExample" class="navbar-menu">
-        <!-- <div class="navbar-start">
-          <a class="navbar-item">
-            Weather Info
-          </a>
-    
-          <a class="navbar-item">
-            Trip informations
-          </a>
-    
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-    
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Bands in Town
-              </a>
-              <a class="navbar-item">
-                Movies in Town
-              </a>
-              <a class="navbar-item">
-                And More
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
-          </div>
-        </div> -->
-    
         <div class="navbar-end">
           <div class="navbar-item">
-            <!-- <div class="buttons"> -->
-              <!-- <a class="button is-primary"> -->
-                <div class="field has-addons" id="navbar-input">
-                  <div class="control source-town-input" id="town-input">
-                    <input class="input" id="source-town-input" type="search" placeholder="Traveling from">
-                  </div>
-                  <div class="destination-info" style="margin-right: 20px">
-                  <div class="control destination-town-input" id="town-input">
-                    <input class="input" id="destination-town-input" type="search" placeholder="To/Staying">
-                  </div>
-                  <div class="from">
-                    From
-                  </div>
-                  <div class="control">
-                    <input class="input" id="date-from" type="date" placeholder="Date to arrive in Town">
-                  </div>
-                  <div class="to">
-                    to
-                  </div>
-                  <div class="control">
-                    <input class="input" id="date-to" type="date" placeholder="Date to leave town">
-                  </div>
+            <div class="field has-addons" id="navbar-input">
+              <div class="control source-town-input" id="town-input">
+                <input class="input" id="source-town-input" type="search" placeholder="Traveling from">
+              </div>
+              <div class="destination-info" style="margin-right: 20px">
+                <div class="control destination-town-input" id="town-input">
+                  <input class="input" id="destination-town-input" type="search" placeholder="To/Staying">
+                </div>
+                <div class="from">
+                  From
+                </div>
+                <div class="control">
+                  <input class="input" id="date-from" type="date" placeholder="Date to arrive in Town">
+                </div>
+                <div class="to">
+                  to
+                </div>
+                <div class="control">
+                  <input class="input" id="date-to" type="date" placeholder="Date to leave town">
+                </div>
                 
-                  <div class="control" id="search-button">
-                    <a class="button is-info">
-                      Search
-                    </a>
-                  </div>
+                <div class="control" id="search-button">
+                  <a class="button is-info">
+                    Search
+                  </a>
                 </div>
-                </div>
-              <!-- </a> -->
-            <!-- </div> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +63,6 @@
     <header><h4>Welcome to Your Trip Assistant</h4></header>
     <p class="header-instruction">We will help you plan your trip by providing a <strong>Weather</strong>, <strong>Trip Distance</strong> and <strong>Local Activity</strong> information in the place you are going to Visit</p>
     <div class="body-container" id="body-container">
-
       <div class="slide-container">
         <div class="img-container">
           <img class="slide-image slide-image-1" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thailand-grand-palace-1541104612.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*" alt="Image of Thailand Grand Palace">

@@ -1,6 +1,5 @@
 var APIKey = "4329b9a304464e3aaf6df7df53ecd8b3";
 let cityName = localStorage.getItem("destination-town"); 
-console.log(document);
 
 getWeather();
 function getWeather() {
@@ -16,13 +15,8 @@ function getWeather() {
         //store data
         .then(function(response){
 
-            // console.log(forecastQueryURL);
-            // console.log(response);
-
             // Get Date
             const currentDate = new Date(response.dt*1000);
-            // console.log(currentDate);
-
             const forecast = document.querySelectorAll(".forecast");
             for (i=0; i<forecast.length; i++) {
                 forecast[i].innerHTML = "";
@@ -40,10 +34,10 @@ function getWeather() {
                 forecastWeather.setAttribute("alt",response.list[forecastIndex].weather[0].description);
                 forecast[i].append(forecastWeather);
                 const forecastTemp = document.createElement("p");
-                forecastTemp.innerHTML = "Temp: " + response.list[forecastIndex].main.temp + " ºF";
+                forecastTemp.innerHTML = "Temp: " + "<br>" + response.list[forecastIndex].main.temp + " ºF";
                 forecast[i].append(forecastTemp);
                 const forecastHumidity = document.createElement("p");
-                forecastHumidity.innerHTML = "Humidity: " + response.list[forecastIndex].main.humidity + "%";
+                forecastHumidity.innerHTML = "Humidity: " + "<br>" + response.list[forecastIndex].main.humidity + "%";
                 forecast[i].append(forecastHumidity);
                 
             }
