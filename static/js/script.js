@@ -4,6 +4,8 @@ var dateFrom;
 var dateTo;
 
 $("document").ready(function() {
+    var now = new Date();
+    var later = new Date(JSON.parse(localStorage.getItem("location-gathered-at")));
 
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
@@ -22,14 +24,20 @@ $("document").ready(function() {
       ln = position.coords.longitude;
       localStorage.setItem("mylat", lt);
       localStorage.setItem("mylon", ln);
-
+      later = new Date();
+      localStorage.setItem("location-gathered-at", JSON.stringify(later));
     //   initMap();
       let cityName = getTownName(position.coords.latitude, position.coords.longitude)
       //   $(".source-town-input").text()
 
     }
 
-    getLocation()
+    var diff = Math.abs(later - now);
+    var timeDiff = Math.ceil(diff/(1000*60));
+    console.log(timeDiff);
+    if (timeDiff > 30) {
+      getLocation();
+    }
     
     function getTownName(lat, lon) {
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
