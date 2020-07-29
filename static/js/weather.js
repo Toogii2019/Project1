@@ -1,6 +1,5 @@
 var APIKey = "4329b9a304464e3aaf6df7df53ecd8b3";
 let cityName = localStorage.getItem("destination-town"); 
-console.log(document);
 
 getWeather();
 function getWeather() {

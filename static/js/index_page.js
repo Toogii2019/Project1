@@ -31,7 +31,6 @@ $("document").ready(function() {
 
     var diff = Math.abs(later - now);
     var timeDiff = Math.ceil(diff/(1000*60));
-    console.log(timeDiff);
     if (timeDiff > 10) {
       getLocation();
     }
