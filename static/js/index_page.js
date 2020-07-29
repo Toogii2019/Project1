@@ -80,4 +80,14 @@ $("document").ready(function() {
       }
 
     })
+
+    $(".result-section").on("click", function(event) {
+      console.log(event.target.textContent);
+      if (event.target.textContent === "5-Day Forecast") {
+        $(".collapse-container-weather").toggleClass("closed-section");
+      }
+      else if (event.target.textContent === "Transportation") {
+        $(".collapse-container-transport").toggleClass("closed-section");
+      }
+    })
 })

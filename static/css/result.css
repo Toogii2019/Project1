@@ -1,3 +1,16 @@
+:root {
+    --primary: rgb(245, 211, 118);
+    --dark: rgb(116, 106, 106);
+    --light: rgb(243, 234, 234);
+    --light-blue: rgb(169, 222, 222);
+    --black: rgb(74, 82, 82);
+    --shadow: 10px 5px 10px rgba(43, 42, 42, 0.8);
+    --title-color: rgb(135, 125, 116);
+    --light-dark: rgb(223, 215, 215);
+    --question-color:  rgb(248, 217, 190);
+}
+
+
 .cityName {
     margin-top: 20px;
     text-align: left;
@@ -36,3 +49,16 @@ h3 {
     display: inline-block;
     width : auto;    
   }
+.result-section {
+    text-align: center; 
+    background: rgb(164, 164, 206);
+}
+
+
+.result-section:hover {
+    background: var(--light);
+}
+
+.closed-section {
+    display: none;
+}
