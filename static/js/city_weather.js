@@ -40,10 +40,10 @@ function getWeather() {
                 forecastWeather.setAttribute("alt",response.list[forecastIndex].weather[0].description);
                 forecast[i].append(forecastWeather);
                 const forecastTemp = document.createElement("p");
-                forecastTemp.innerHTML = "Temp: " + response.list[forecastIndex].main.temp + " ºF";
+                forecastTemp.innerHTML = "Temp: " + "<br>" + response.list[forecastIndex].main.temp + " ºF";
                 forecast[i].append(forecastTemp);
                 const forecastHumidity = document.createElement("p");
-                forecastHumidity.innerHTML = "Humidity: " + response.list[forecastIndex].main.humidity + "%";
+                forecastHumidity.innerHTML = "Humidity: " + "<br>" + response.list[forecastIndex].main.humidity + "%";
                 forecast[i].append(forecastHumidity);
                 
             }
