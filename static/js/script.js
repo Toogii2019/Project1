@@ -40,7 +40,7 @@ $("document").ready(function() {
     }
     else {
       $("#source-town-input").val(localStorage.getItem("source-town"));
-      
+      $("#destination-town-input").val(localStorage.getItem("destination-town"));
     }
     
     function getTownName(lat, lon) {
