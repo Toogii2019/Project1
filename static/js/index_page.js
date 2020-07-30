@@ -38,6 +38,11 @@ $("document").ready(function() {
       $("#source-town-input").val(localStorage.getItem("source-town"));
       $("#destination-town-input").val(localStorage.getItem("destination-town"));
     }
+
+    function alertUser(alertToShow) {
+      $(".modal-content").text(alertToShow);
+      $(".modal").addClass("is-active");
+    }
     
     function getTownName(lat, lon) {
 
@@ -69,7 +74,18 @@ $("document").ready(function() {
       dateFrom = $("#date-from").val();
       dateTo = $("#date-to").val();
       if (!source || !destination || !dateFrom || !dateTo) {
-          alert("Please complete the form before searching")
+        if (!source) {
+          alertUser("Please enter the source town name");
+        }
+        else if (!destination) {
+          alertUser("Please enter the destination town name");
+        }
+        else if (!dateFrom) {
+          alertUser("Please enter the travel start date");
+        }
+        else if (!dateTo) {
+          alertUser("Please enter the travel end date");
+        }
       }
       else {
           localStorage.setItem("source-town", $("#source-town-input").val());
@@ -89,5 +105,9 @@ $("document").ready(function() {
       else if (event.target.textContent === "Transportation") {
         $(".collapse-container-transport").toggleClass("closed-section");
       }
+    })
+
+    $(".modal-close-button").on("click", function() {
+      $(".modal").removeClass("is-active");
     })
 })
