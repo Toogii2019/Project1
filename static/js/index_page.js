@@ -7,7 +7,7 @@ $("document").ready(function() {
     var now = new Date();
     var later = new Date(JSON.parse(localStorage.getItem("location-gathered-at")));
 
-    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+    var APIKey = "4329b9a304464e3aaf6df7df53ecd8b3";
     
     function getLocation() {
       // Get user's current location using Geolocation
@@ -48,15 +48,16 @@ $("document").ready(function() {
 
       // Convert user's lat lon into town name using openweather API;
 
-        var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
-    
+        // var queryURL = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&lat=${lat}&lon=${lon}`;
+        var queryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${APIKey}`
         $.ajax({
           url: queryURL,
           method: "GET"
           })
           .then(function(response) {
             $("#source-town-input").val(response.city.name + ", " + response.city.country);
-            
+            console.log(queryURL);
+            console.log(response);
             source = $("#source-town-input").val();
             destination = $("#destination-town-input").val();
     
