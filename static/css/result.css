@@ -62,3 +62,23 @@ h3 {
 .closed-section {
     display: none;
 }
+
+/* .modal-background {
+    width: 30vw;
+    height: 30vh;
+    margin: 10% auto 30% auto;
+} */
+
+.modal-content {
+    color: black;
+    background: white;
+    width: auto;
+    height: auto;
+    opacity: 0.8;
+    text-align: center;
+    border-radius: 5px;
+    /* padding: 40px 0 40px 0; */
+    font-family: Caveat;
+    font-size: 1rem;
+    color: rgb(226, 80, 80);
+}
