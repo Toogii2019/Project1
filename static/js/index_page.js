@@ -56,8 +56,7 @@ $("document").ready(function() {
           })
           .then(function(response) {
             $("#source-town-input").val(response.city.name + ", " + response.city.country);
-            console.log(queryURL);
-            console.log(response);
+
             source = $("#source-town-input").val();
             destination = $("#destination-town-input").val();
     
@@ -99,7 +98,7 @@ $("document").ready(function() {
     })
 
     $(".result-section").on("click", function(event) {
-      console.log(event.target.textContent);
+      // console.log(event.target.textContent);
       if (event.target.textContent === "5-Day Forecast") {
         $(".collapse-container-weather").toggleClass("closed-section");
       }
