@@ -1,9 +1,12 @@
 var lt = -100;
 var ln = -300;
+var destLat = 0;
+var destLng = 0;
 let navigated = false;
 
-function initMap() {
+$("document").ready(startNavigation);
 
+function initMap() {
     // Process google map API response
 
     let map = new google.maps.Map(document.getElementById("map"), {
@@ -32,6 +35,9 @@ function calcRoute(directionsService, directionsDisplay) {
         destination: localStorage.getItem("destination-town"),
         travelMode: 'DRIVING'
     },function(response, status) {
+        destLat = response.routes[0].legs[0].end_location.lat();
+        destLng = response.routes[0].legs[0].end_location.lng();
+        getYelp();
         if (status === "OK") {
             directionsDisplay.setDirections(response);
         }
@@ -54,7 +60,7 @@ function calcRoute(directionsService, directionsDisplay) {
 
 // Please remove content below this for the demo
 function startNavigation() {
-    var GC_API_KEY = "AIzaSyBmHZvGIRn2j7G_KaMQp4sWCM5jBVB6ZKs";
+    var GC_API_KEY = "NOSECRET";
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
@@ -64,4 +70,6 @@ function startNavigation() {
     }
 
 }
+
+
 // Please remove content above this point for the demo

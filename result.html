@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index_page.css">
   <link rel="stylesheet" href="static/css/result.css">
+  <link rel="stylesheet" href="static/css/yelp.css">
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="static/js/map.js"></script>
   <script src="static/js/weather.js"></script>
   <script src="static/js/index_page.js"></script>
+  <script src="static/js/yelp.js"></script>
+
 </head>
 <body>
   <div class="main-container">
@@ -22,7 +26,7 @@
             <img src="https://solarimpulse.com/files/companies/logo/2019-10-04-120435/logotriply.jpg" width="112" height="28">
           </a>
           <!-- Please remove content below this for the demo -->
-          <button class="button is-success" style="margin-top: 10px;" onclick="startNavigation();">Start Navigation</button>      
+          <!-- <button class="button is-success" style="margin-top: 10px;" onclick="startNavigation();">Start Navigation</button>       -->
           <!-- Please remove content above this point for the demo -->
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
             <span aria-hidden="true"></span>
@@ -101,6 +105,21 @@
         </div>  
       </div>
     </div>
+
+
+    <div class="result-section"><strong><h3><a href="#">Local Restaurants</a></h3></strong></div>
+    <div class="collapse-container-restaurants">
+      <div class="trip-container" style="text-align: center;" id="town-name"></div>
+      <div class="food" style="text-align: center">
+        <div class="col restaurants bg-primary text-white"></div>
+        <div class="col restaurants bg-primary text-white"></div>
+        <div class="col restaurants bg-primary text-white"></div>
+        <div class="col restaurants bg-primary text-white"></div>
+        <div class="col restaurants bg-primary text-white"></div>
+      </div>
+    </div>
+
+
   </div>
   <div class="modal">
     <div class="modal-background"></div>

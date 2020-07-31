@@ -105,6 +105,9 @@ $("document").ready(function() {
       else if (event.target.textContent === "Transportation") {
         $(".collapse-container-transport").toggleClass("closed-section");
       }
+      else if (event.target.textContent === "Local Restaurants") {
+        $(".collapse-container-restaurants").toggleClass("closed-section");
+      }
     })
 
     $(".modal-close-button").on("click", function() {
