@@ -46,9 +46,13 @@ h4 {
     margin: 10px 10px 0 10px;
 }
 
-#town-input {
+#src-town-input {
     margin: 0 20px 0 0;
 }
+
+/* #dst-town-input {
+    margin: 0 20px 0 0;
+} */
 
 .from {
     margin: 10px 20px 0 5px;
