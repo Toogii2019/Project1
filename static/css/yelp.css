@@ -1,0 +1,28 @@
+.food-images {
+    width: 30%;
+    height: 60%;
+    background: rgb(179, 231, 215);
+    margin-top: 10px;
+    border: 1px solid;
+
+}
+
+.food {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.more-info {
+    font-weight: bold;
+    color: black;
+    background: rgb(127, 167, 127);
+    padding: 10px;
+    margin: 30px;
+}
+
+.phone-num {
+    padding: 10px;
+}

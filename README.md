@@ -46,4 +46,3 @@ Google Maps API https://cloud.google.com/maps-platform/
 
 CSS framework used : Bulma https://bulma.io/documentation/
 
-Font-Awesome Icons: https://fontawesome.com/
