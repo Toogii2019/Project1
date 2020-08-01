@@ -60,7 +60,7 @@ function calcRoute(directionsService, directionsDisplay) {
 
 // Please remove content below this for the demo
 function startNavigation() {
-    var GC_API_KEY = "NOSECRET";
+    var GC_API_KEY = "AIzaSyCDnzWI72t7Vvk8VxS2MwTPKI3EcdGXCmM";
     if (!navigated) {
         var scriptCont = $("<script async defer>");
 
