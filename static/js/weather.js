@@ -41,9 +41,9 @@ function getWeather() {
                 forecast[i].append(forecastHumidity);
                 
             }
-            $("#town-name").html("<h4>" + cityName + "</h4>");
-            $("#town-name").css("font-family", "Caveat");
-            $("#town-name").css("text-align", "center");
+            $(".town-name").html("<h4>" + cityName + "</h4>");
+            $(".town-name").css("font-family", "Caveat");
+            $(".town-name").css("text-align", "center");
         });  
     
         
