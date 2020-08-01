@@ -1,6 +1,6 @@
 
 function getYelp() {
-  var API_KEY = "NOSECRET";
+  var API_KEY = "RR_uOpqlBA49pzlP4KwGkkdaCpepKaWuo3FfJdFWMODR7wY62BqpSGeRWPoZNk6NEY3v6IxHEbpUS78_ZhkL56Qqcx4eWlnAYO3UtcgLtO8gT92R63YtsA1qE3sjX3Yx";
   queryUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=delis&latitude=${destLat}&longitude=${destLng}`;
 
 
